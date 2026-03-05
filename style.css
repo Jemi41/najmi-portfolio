@@ -38,6 +38,31 @@ h3 {
     padding-bottom: 5px;
 }
 
+/* PROJECT LINK STYLES */
+article a {
+    text-decoration: none; /* Removes the default underline */
+}
+
+article a h4 {
+    color: #0056b3; /* Keeps your nice blue color */
+    transition: color 0.2s ease; /* Smooth color change on hover */
+}
+
+/* Make the title change color when the mouse touches it */
+article a h4:hover {
+    color: #ff8c00; /* A cool dark orange highlight, change if you prefer! */
+    text-decoration: underline; /* Only underline it when hovering */
+}
+
+/* Dark mode adjustment for the links */
+body.dark-mode article a h4 {
+    color: #66b2ff; 
+}
+
+body.dark-mode article a h4:hover {
+    color: #ffb347; /* Lighter orange for dark mode */
+}
+
 /* 4. LISTS (For Education and Links) */
 ul {
     list-style-type: square; /* Cool square bullet points */
