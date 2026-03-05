@@ -1,12 +1,8 @@
-html {
-    scroll-behavior: smooth;
-}
-
 /* 1. OVERALL PAGE SETUP */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: #121212; /* Permanent dark background */
-    color: #ffffff; /* Permanent white text */
+    color: #ffffff; /* White text for contrast */
     line-height: 1.6;
     margin: 0;
     padding: 0;
@@ -16,21 +12,21 @@ body {
 header, section, footer {
     max-width: 800px;
     margin: 20px auto;
-    background-color: #1e1e1e; /* Darker gray boxes */
+    background-color: #1e1e1e; /* Dark gray boxes for sections */
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle lift for dark theme */
 }
 
 /* 3. HEADINGS & ACCENTS */
 h1 {
-    color: #66b2ff; /* Bright blue for dark theme */
+    color: #66b2ff; /* Professional blue highlight */
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 h2 {
-    color: #cccccc; /* Light gray sub-headings */
+    color: #cccccc; /* Light gray for the student subtitle */
     font-weight: normal;
     font-size: 1.2rem;
     margin-top: 0;
@@ -42,9 +38,9 @@ h3 {
     padding-bottom: 5px;
 }
 
-/* 4. PROJECT LINKS */
+/* 4. PROJECT LINK STYLES */
 article a {
-    text-decoration: none;
+    text-decoration: none; /* No default underline */
 }
 
 article a h4 {
@@ -53,7 +49,7 @@ article a h4 {
 }
 
 article a h4:hover {
-    color: #ffb347; /* Soft orange hover */
+    color: #ffb347; /* Soft orange highlight on hover */
     text-decoration: underline;
 }
 
@@ -64,21 +60,34 @@ ul {
 }
 
 hr {
-    display: none;
+    display: none; /* Layout is managed by section boxes */
 }
 
-/* 6. PROJECT IMAGES */
+/* 6. PROJECT IMAGES & CARDS */
+article {
+    transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+article:hover {
+    transform: translateY(-5px); /* Lift effect for the card */
+    border: 1px solid #66b2ff;
+    background-color: #252525; /* Subtle background highlight */
+}
+
 .project-img {
     display: block; 
     margin: 15px auto; 
-    max-width: 50%; 
+    max-width: 80%; /* Adjusted for better visibility on most screens */
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-img:hover {
-    transform: scale(1.03);
+    transform: scale(1.03); /* Slight zoom on image */
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
@@ -87,14 +96,14 @@ hr {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Responsive stacking for mobile */
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #66b2ff;
-    color: #121212 !important; /* Dark text on light button */
+    color: #121212 !important; /* Dark text on light blue buttons */
     text-decoration: none !important;
     border-radius: 5px;
     font-weight: bold;
@@ -105,4 +114,16 @@ hr {
     background-color: #99ccff;
     transform: translateY(-3px);
     box-shadow: 0 4px 12px rgba(102, 178, 255, 0.3);
+}
+
+/* 8. SCROLL REVEAL ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* Slide up effect */
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Final visible position */
 }

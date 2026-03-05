@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ahmad Najmi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        /* This ensures smooth scrolling when clicking links */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
-<body class="dark-mode"> <header>
+<body class="dark-mode"> 
+
+    <header class="reveal">
         <h1>Hi, I'm Ahmad Najmi</h1>
         <h2>Computer Engineering Student | Bridging AI, Heritage, and Culture</h2>
         <p>Based in Terengganu, Malaysia.</p>
@@ -14,7 +22,7 @@
 
     <hr>
 
-    <section>
+    <section class="reveal">
         <h3>About Me</h3>
         <p>I am a Computer Engineering student at Universiti Teknikal Malaysia Melaka (UTeM).</p> 
         
@@ -27,7 +35,7 @@
 
     <hr>
 
-    <section>
+    <section class="reveal">
         <h3>Featured Projects</h3>
         
         <article>
@@ -53,7 +61,7 @@
 
     <hr>
 
-    <section id="contact">
+    <section id="contact" class="reveal">
         <h3>Get In Touch</h3>
         <p>I am always open to discussing new projects, creative ideas, or opportunities. Let's connect!</p>
         
@@ -67,6 +75,19 @@
     <footer style="text-align: center; margin-top: 50px; padding-bottom: 20px; font-size: 0.9rem; color: #777;">
         <p>© 2026 Ahmad Najmi. Built with HTML, CSS, & JavaScript.</p>
     </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        const revealElements = document.querySelectorAll('.reveal');
+        revealElements.forEach((el) => observer.observe(el));
+    </script>
 
 </body>
 </html>
