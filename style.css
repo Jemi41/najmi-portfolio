@@ -141,3 +141,40 @@ body.dark-mode #darkModeToggle:hover {
     transform: scale(1.03); /* Zooms the image in by exactly 3% */
     box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Makes the shadow deeper so it looks lifted */
 }
+
+/* 7. CONTACT BUTTONS */
+.contact-links {
+    display: flex;
+    gap: 15px; /* Puts a nice space between the buttons */
+    margin-top: 20px;
+    flex-wrap: wrap; /* Ensures they stack neatly on small mobile screens */
+}
+
+/* Base button styling */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0056b3; /* Your professional blue */
+    color: #ffffff !important; /* Keeps the text white */
+    text-decoration: none !important; /* Removes the ugly underline */
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* The button hover effect */
+.btn:hover {
+    background-color: #004494; /* Slightly darker blue when touched */
+    transform: translateY(-3px); /* Makes the button physically lift up! */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Dark mode adjustments for the buttons */
+body.dark-mode .btn {
+    background-color: #66b2ff; /* Bright blue for dark mode */
+    color: #121212 !important; /* Dark text inside the button */
+}
+
+body.dark-mode .btn:hover {
+    background-color: #99ccff; /* Lighter blue when touched */
+}
