@@ -127,3 +127,208 @@ article:hover {
     opacity: 1;
     transform: translateY(0); /* Final visible position */
 }
+
+/* AWARDS & ACHIEVEMENTS STYLING */
+.achievement-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #66b2ff; /* Blue accent line */
+    background-color: #252525; /* Slightly lighter than the section background */
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateX(10px); /* Subtle slide effect on hover */
+    background-color: #2a2a2a;
+}
+
+.achievement-item h4 {
+    margin-top: 0;
+    color: #ffb347; /* Gold/Orange color for the titles */
+    margin-bottom: 5px;
+}
+
+.achievement-item p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* 1. OVERALL PAGE SETUP */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Permanent dark background */
+    color: #ffffff; /* White text for contrast */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. THE MAIN CONTAINER */
+header, section, footer {
+    max-width: 800px;
+    margin: 20px auto;
+    background-color: #1e1e1e; /* Dark gray boxes for sections */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle lift for dark theme */
+}
+
+/* 3. HEADINGS & ACCENTS */
+h1 {
+    color: #66b2ff; /* Professional blue highlight */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #cccccc; /* Light gray for the student subtitle */
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+h3 {
+    color: #66b2ff;
+    border-bottom: 2px solid #333333;
+    padding-bottom: 5px;
+}
+
+/* 4. PROJECT LINK STYLES */
+article a {
+    text-decoration: none; /* No default underline */
+}
+
+article a h4 {
+    color: #66b2ff;
+    transition: color 0.2s ease;
+}
+
+article a h4:hover {
+    color: #ffb347; /* Soft orange highlight on hover */
+    text-decoration: underline;
+}
+
+/* 5. LISTS & HR */
+ul {
+    list-style-type: square;
+    padding-left: 20px;
+}
+
+hr {
+    display: none; /* Layout is managed by section boxes */
+}
+
+/* 6. PROJECT IMAGES & CARDS */
+article {
+    transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease;
+    border: 1px solid transparent;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+article:hover {
+    transform: translateY(-5px); /* Lift effect for the card */
+    border: 1px solid #66b2ff;
+    background-color: #252525; /* Subtle background highlight */
+}
+
+.project-img {
+    display: block; 
+    margin: 15px auto; 
+    max-width: 80%; /* Adjusted for better visibility on most screens */
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-img:hover {
+    transform: scale(1.03); /* Slight zoom on image */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+}
+
+/* 7. CONTACT BUTTONS */
+.contact-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Responsive stacking for mobile */
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #66b2ff;
+    color: #121212 !important; /* Dark text on light blue buttons */
+    text-decoration: none !important;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #99ccff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 178, 255, 0.3);
+}
+
+/* 8. SCROLL REVEAL ANIMATIONS */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px); /* Slide up effect */
+    transition: all 0.8s ease-out;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0); /* Final visible position */
+}
+
+/* AWARDS & ACHIEVEMENTS STYLING */
+.achievement-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    border-left: 4px solid #66b2ff; /* Blue accent line */
+    background-color: #252525; /* Slightly lighter than the section background */
+    border-radius: 0 8px 8px 0;
+    transition: transform 0.3s ease;
+}
+
+.achievement-item:hover {
+    transform: translateX(10px); /* Subtle slide effect on hover */
+    background-color: #2a2a2a;
+}
+
+.achievement-item h4 {
+    margin-top: 0;
+    color: #ffb347; /* Gold/Orange color for the titles */
+    margin-bottom: 5px;
+}
+
+.achievement-item p {
+    margin: 5px 0;
+    font-size: 0.95rem;
+}
+
+/* TECHNICAL TOOLBOX STYLING */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.skill-item {
+    background-color: #252525;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: border-color 0.3s ease, transform 0.3s ease;
+}
+
+.skill-item:hover {
+    border-color: #66b2ff;
+    transform: translateY(-3px);
+}
