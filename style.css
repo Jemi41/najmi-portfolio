@@ -101,11 +101,18 @@ body.dark-mode #darkModeToggle:hover {
     background-color: #444444; /* Slightly lighter gray when hovered */
 }
 
-/* PROJECT IMAGES */
+/* PROJECT IMAGES (Base Style) */
 .project-img {
-    display: block; /* Tells the browser to treat the image like a box */
-    margin: 15px auto; /* 'auto' on the left and right pushes it perfectly to the center */
-    max-width: 50%; /* Prevents the image from being too huge */
-    border-radius: 8px; /* Keeps your nice rounded corners */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to make it pop */
+    display: block; 
+    margin: 15px auto; 
+    max-width: 50%; 
+    border-radius: 8px; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* This makes the zoom smooth! */
+}
+
+/* THE HOVER EFFECT (When the mouse touches it) */
+.project-img:hover {
+    transform: scale(1.03); /* Zooms the image in by exactly 3% */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Makes the shadow deeper so it looks lifted */
 }
