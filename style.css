@@ -48,3 +48,55 @@ ul {
 hr {
     display: none; /* We don't need these anymore because of the white boxes! */
 }
+/* 6. DARK MODE STYLES */
+body.dark-mode {
+    background-color: #121212; /* Very dark gray, almost black */
+    color: #ffffff; /* White text */
+}
+
+/* Make the white boxes turn dark gray */
+body.dark-mode header, 
+body.dark-mode section, 
+body.dark-mode footer {
+    background-color: #1e1e1e; 
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle white shadow */
+}
+
+/* Adjust the text colors so they are easy to read in the dark */
+body.dark-mode h1, 
+body.dark-mode h3 {
+    color: #66b2ff; /* A lighter, brighter blue */
+}
+
+body.dark-mode h2 {
+    color: #cccccc; /* Light gray for the sub-headings */
+}
+
+/* BUTTON STYLING */
+#darkModeToggle {
+    padding: 10px 15px;
+    background-color: #eeeeee; /* Soft gray for light mode */
+    color: #333333; /* Dark text */
+    border: 1px solid #cccccc;
+    border-radius: 5px; /* Nice rounded corners */
+    cursor: pointer; /* Turns the mouse into a clicking hand */
+    font-weight: bold;
+    transition: all 0.3s ease; /* Makes the color swap fade smoothly! */
+}
+
+/* Make it react when the mouse touches it */
+#darkModeToggle:hover {
+    background-color: #dddddd; 
+}
+
+/* Button colors WHEN in dark mode */
+body.dark-mode #darkModeToggle {
+    background-color: #333333; /* The cool dark gray you wanted */
+    color: #ffffff; /* White text */
+    border: 1px solid #555555; /* Subtle dark border */
+}
+
+/* Hover effect in dark mode */
+body.dark-mode #darkModeToggle:hover {
+    background-color: #444444; /* Slightly lighter gray when hovered */
+}

@@ -12,6 +12,7 @@
         <h1>Hi, I'm Ahmad Najmi</h1>
         <h2>Computer Engineering Student | Bridging AI, Heritage, and Culture</h2>
         <p>Based in Terengganu, Malaysia.</p>
+        <button id="darkModeToggle">Toggle Dark Mode 🌙</button>
     </header>
 
     <hr>
@@ -58,6 +59,17 @@
             <li>LinkedIn: linkedin.com/in/ahmadnajmi41702</li>
         </ul>
     </footer>
+
+    <script>
+        // 1. Find the button in the HTML
+        const toggleBtn = document.getElementById('darkModeToggle');
+        
+        // 2. Listen for a click
+        toggleBtn.addEventListener('click', () => {
+            // 3. Turn the 'dark-mode' CSS on or off
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
 
 </body>
 </html>
