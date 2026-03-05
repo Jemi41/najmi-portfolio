@@ -14,15 +14,32 @@
 </head>
 <body class="dark-mode"> 
 
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">AN</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#awards">Awards</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <header class="reveal">
         <h1>Hi, I'm Ahmad Najmi</h1>
-        <h2>Computer Engineering Student | Bridging AI, Heritage, and Culture</h2>
-        <p>Based in Terengganu, Malaysia.</p>
+        <h2>Computer Engineering Student | Tech Enthusiast & System Builder</h2>
+        <p class="mission-statement">
+            "Turning complex hardware and software challenges into seamless digital solutions."
+        </p>
+        <p>
+            I am a Computer Engineering student at Universiti Teknikal Malaysia Melaka (UTeM) with a deep passion for exploring the intersection of Artificial Intelligence, Machine Learning, Data Science, cybersecurity, and embedded systems. 
+            From winning awards in hardware design to securing networks and building intelligent models, I thrive on learning how things work—and how to make them better.
+        </p>
     </header>
 
-    <hr>
-
-    <section class="reveal">
+    <section id="about" class="reveal">
         <h3>About Me</h3>
         <p>I am a Computer Engineering student at Universiti Teknikal Malaysia Melaka (UTeM).</p> 
         
@@ -34,19 +51,17 @@
         </ul>
     </section>
 
-    <section class="reveal">
-    <h3>Technical Toolbox</h3>
-    <div class="skills-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px;">
-        <div class="skill-item"><strong>AI:</strong> TensorFlow, Python</div>
-        <div class="skill-item"><strong>Cyber:</strong> Suricata, Wireshark</div>
-        <div class="skill-item"><strong>Hardware:</strong> ESP32, Assembly</div>
-        <div class="skill-item"><strong>Web:</strong> React.js, CSS</div>
-    </div>
-</section>
+    <section id="skills" class="reveal">
+        <h3>Technical Toolbox</h3>
+        <div class="skills-grid">
+            <div class="skill-item"><strong>AI:</strong> TensorFlow, Python</div>
+            <div class="skill-item"><strong>Cyber:</strong> Suricata, Wireshark</div>
+            <div class="skill-item"><strong>Hardware:</strong> ESP32, Assembly</div>
+            <div class="skill-item"><strong>Web:</strong> React.js, CSS</div>
+        </div>
+    </section>
 
-    <hr>
-
-    <section class="reveal">
+    <section id="awards" class="reveal">
         <h3>Awards & Achievements</h3>
         
         <div class="achievement-item">
@@ -61,9 +76,8 @@
             <p>Achieved the Dean's List honor for two consecutive semesters (concluding January 2026), maintaining high academic standing in Computer Engineering.</p>
         </div>
     </section>
-    <hr>
 
-    <section class="reveal">
+    <section id="projects" class="reveal">
         <h3>Featured Projects</h3>
         
         <article>
@@ -87,8 +101,6 @@
         </article>
     </section>
 
-    <hr>
-
     <section id="contact" class="reveal">
         <h3>Get In Touch</h3>
         <p>I am always open to discussing new projects, creative ideas, or opportunities. Let's connect!</p>
@@ -105,17 +117,36 @@
     </footer>
 
     <script>
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, { threshold: 0.1 });
+    // 1. SCROLL REVEAL LOGIC (Existing)
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, { threshold: 0.1 });
 
-        const revealElements = document.querySelectorAll('.reveal');
-        revealElements.forEach((el) => observer.observe(el));
-    </script>
+    const revealElements = document.querySelectorAll('.reveal');
+    revealElements.forEach((el) => observer.observe(el));
+
+    // 2. CENTERED NAV LOGIC (New)
+    document.querySelectorAll('.nav-links a').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault(); // Stop the default jump
+
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                // This magic line scrolls until the element is in the middle
+                targetElement.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center' 
+                });
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
