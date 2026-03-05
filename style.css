@@ -1,180 +1,104 @@
 /* 1. OVERALL PAGE SETUP */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
-    background-color: #f4f4f9; /* Soft light gray background */
-    color: #333333; /* Dark gray text for easy reading */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #121212; /* Permanent dark background */
+    color: #ffffff; /* Permanent white text */
     line-height: 1.6;
     margin: 0;
     padding: 0;
 }
 
-/* 2. THE MAIN CONTAINER (Keeps things centered and not too wide) */
+/* 2. THE MAIN CONTAINER */
 header, section, footer {
     max-width: 800px;
-    margin: 20px auto; /* Centers the boxes on the screen */
-    background-color: #ffffff; /* White background for the content */
+    margin: 20px auto;
+    background-color: #1e1e1e; /* Darker gray boxes */
     padding: 30px;
-    border-radius: 8px; /* Soft rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle 3D shadow effect */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
 }
 
 /* 3. HEADINGS & ACCENTS */
 h1 {
-    color: #0056b3; /* Professional blue for your name */
+    color: #66b2ff; /* Bright blue for dark theme */
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 h2 {
-    color: #555555;
+    color: #cccccc; /* Light gray sub-headings */
     font-weight: normal;
     font-size: 1.2rem;
     margin-top: 0;
 }
 
 h3 {
-    color: #0056b3;
-    border-bottom: 2px solid #eeeeee; /* A nice dividing line under section titles */
+    color: #66b2ff;
+    border-bottom: 2px solid #333333;
     padding-bottom: 5px;
 }
 
-/* PROJECT LINK STYLES */
+/* 4. PROJECT LINKS */
 article a {
-    text-decoration: none; /* Removes the default underline */
+    text-decoration: none;
 }
 
 article a h4 {
-    color: #0056b3; /* Keeps your nice blue color */
-    transition: color 0.2s ease; /* Smooth color change on hover */
+    color: #66b2ff;
+    transition: color 0.2s ease;
 }
 
-/* Make the title change color when the mouse touches it */
 article a h4:hover {
-    color: #ff8c00; /* A cool dark orange highlight, change if you prefer! */
-    text-decoration: underline; /* Only underline it when hovering */
+    color: #ffb347; /* Soft orange hover */
+    text-decoration: underline;
 }
 
-/* Dark mode adjustment for the links */
-body.dark-mode article a h4 {
-    color: #66b2ff; 
-}
-
-body.dark-mode article a h4:hover {
-    color: #ffb347; /* Lighter orange for dark mode */
-}
-
-/* 4. LISTS (For Education and Links) */
+/* 5. LISTS & HR */
 ul {
-    list-style-type: square; /* Cool square bullet points */
+    list-style-type: square;
     padding-left: 20px;
 }
 
-/* 5. REMOVE THE UGLY DEFAULT HR LINES */
 hr {
-    display: none; /* We don't need these anymore because of the white boxes! */
-}
-/* 6. DARK MODE STYLES */
-body.dark-mode {
-    background-color: #121212; /* Very dark gray, almost black */
-    color: #ffffff; /* White text */
+    display: none;
 }
 
-/* Make the white boxes turn dark gray */
-body.dark-mode header, 
-body.dark-mode section, 
-body.dark-mode footer {
-    background-color: #1e1e1e; 
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle white shadow */
-}
-
-/* Adjust the text colors so they are easy to read in the dark */
-body.dark-mode h1, 
-body.dark-mode h3 {
-    color: #66b2ff; /* A lighter, brighter blue */
-}
-
-body.dark-mode h2 {
-    color: #cccccc; /* Light gray for the sub-headings */
-}
-
-/* BUTTON STYLING */
-#darkModeToggle {
-    padding: 10px 15px;
-    background-color: #eeeeee; /* Soft gray for light mode */
-    color: #333333; /* Dark text */
-    border: 1px solid #cccccc;
-    border-radius: 5px; /* Nice rounded corners */
-    cursor: pointer; /* Turns the mouse into a clicking hand */
-    font-weight: bold;
-    transition: all 0.3s ease; /* Makes the color swap fade smoothly! */
-}
-
-/* Make it react when the mouse touches it */
-#darkModeToggle:hover {
-    background-color: #dddddd; 
-}
-
-/* Button colors WHEN in dark mode */
-body.dark-mode #darkModeToggle {
-    background-color: #333333; /* The cool dark gray you wanted */
-    color: #ffffff; /* White text */
-    border: 1px solid #555555; /* Subtle dark border */
-}
-
-/* Hover effect in dark mode */
-body.dark-mode #darkModeToggle:hover {
-    background-color: #444444; /* Slightly lighter gray when hovered */
-}
-
-/* PROJECT IMAGES (Base Style) */
+/* 6. PROJECT IMAGES */
 .project-img {
     display: block; 
     margin: 15px auto; 
     max-width: 50%; 
     border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* This makes the zoom smooth! */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* THE HOVER EFFECT (When the mouse touches it) */
 .project-img:hover {
-    transform: scale(1.03); /* Zooms the image in by exactly 3% */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* Makes the shadow deeper so it looks lifted */
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
 /* 7. CONTACT BUTTONS */
 .contact-links {
     display: flex;
-    gap: 15px; /* Puts a nice space between the buttons */
+    gap: 15px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Ensures they stack neatly on small mobile screens */
+    flex-wrap: wrap;
 }
 
-/* Base button styling */
 .btn {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #0056b3; /* Your professional blue */
-    color: #ffffff !important; /* Keeps the text white */
-    text-decoration: none !important; /* Removes the ugly underline */
+    background-color: #66b2ff;
+    color: #121212 !important; /* Dark text on light button */
+    text-decoration: none !important;
     border-radius: 5px;
     font-weight: bold;
     transition: all 0.3s ease;
 }
 
-/* The button hover effect */
 .btn:hover {
-    background-color: #004494; /* Slightly darker blue when touched */
-    transform: translateY(-3px); /* Makes the button physically lift up! */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-}
-
-/* Dark mode adjustments for the buttons */
-body.dark-mode .btn {
-    background-color: #66b2ff; /* Bright blue for dark mode */
-    color: #121212 !important; /* Dark text inside the button */
-}
-
-body.dark-mode .btn:hover {
-    background-color: #99ccff; /* Lighter blue when touched */
+    background-color: #99ccff;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(102, 178, 255, 0.3);
 }

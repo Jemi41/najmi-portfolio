@@ -6,20 +6,17 @@
     <title>Ahmad Najmi | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-    <header>
+<body class="dark-mode"> <header>
         <h1>Hi, I'm Ahmad Najmi</h1>
         <h2>Computer Engineering Student | Bridging AI, Heritage, and Culture</h2>
         <p>Based in Terengganu, Malaysia.</p>
-        <button id="darkModeToggle">Toggle Dark Mode 🌙</button>
     </header>
 
     <hr>
 
     <section>
         <h3>About Me</h3>
-        <p>I am a Computer Engineering student at Universiti Teknikal Malaysia Melaka (UTeM). I am passionate about leveraging modern technology to solve real-world problems and preserve cultural heritage.</p>
+        <p>I am a Computer Engineering student at Universiti Teknikal Malaysia Melaka (UTeM).</p> 
         
         <h3>Education & Honors</h3>
         <ul>
@@ -33,14 +30,13 @@
     <section>
         <h3>Featured Projects</h3>
         
-<article>
+        <article>
             <a href="https://github.com/Jemi41/Songket-AI" target="_blank">
                 <h4>Songket-AI: Authenticating Heritage 🔗</h4>
             </a>
-            
             <p><strong>Role:</strong> Final Year Project | <strong>Status:</strong> 🚧 In Development</p>
             <img src="images/songket-ai.jpg" alt="Songket AI Project" class="project-img">
-            <p>Utilizing Artificial Intelligence to successfully distinguish between Malaysian and Indonesian songket motifs, leveraging local Terengganu resources.</p>
+            <p>Utilizing Artificial Intelligence to successfully distinguish between Malaysian and Indonesian songket motifs.</p>
         </article>
 
         <br>
@@ -49,7 +45,6 @@
             <a href="https://github.com/Jemi41/TEJA-RFID-Attendance-System" target="_blank">
                 <h4>TEJA: Smart RFID Attendance Portal 🔗</h4>
             </a>
-            
             <p><strong>Role:</strong> Project Leader | <strong>Status:</strong> ✅ Completed (Bronze Award)</p>
             <img src="images/TEJA.jpg" alt="TEJA RFID Portal" class="project-img">
             <p>An Integrated Design Project utilizing RFID tech and microcontrollers to manage attendance.</p>
@@ -57,9 +52,10 @@
     </section>
 
     <hr>
+
     <section id="contact">
         <h3>Get In Touch</h3>
-        <p>I am always open to discussing new projects, creative ideas, or opportunities to be part of your vision. Let's connect!</p>
+        <p>I am always open to discussing new projects, creative ideas, or opportunities. Let's connect!</p>
         
         <div class="contact-links">
             <a href="mailto:ahmadnajmi02@gmail.com" class="btn">✉️ Email Me</a>
@@ -71,17 +67,6 @@
     <footer style="text-align: center; margin-top: 50px; padding-bottom: 20px; font-size: 0.9rem; color: #777;">
         <p>© 2026 Ahmad Najmi. Built with HTML, CSS, & JavaScript.</p>
     </footer>
-
-    <script>
-        // 1. Find the button in the HTML
-        const toggleBtn = document.getElementById('darkModeToggle');
-        
-        // 2. Listen for a click
-        toggleBtn.addEventListener('click', () => {
-            // 3. Turn the 'dark-mode' CSS on or off
-            document.body.classList.toggle('dark-mode');
-        });
-    </script>
 
 </body>
 </html>
