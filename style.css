@@ -1,0 +1,50 @@
+/* 1. OVERALL PAGE SETUP */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Clean, modern font */
+    background-color: #f4f4f9; /* Soft light gray background */
+    color: #333333; /* Dark gray text for easy reading */
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. THE MAIN CONTAINER (Keeps things centered and not too wide) */
+header, section, footer {
+    max-width: 800px;
+    margin: 20px auto; /* Centers the boxes on the screen */
+    background-color: #ffffff; /* White background for the content */
+    padding: 30px;
+    border-radius: 8px; /* Soft rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle 3D shadow effect */
+}
+
+/* 3. HEADINGS & ACCENTS */
+h1 {
+    color: #0056b3; /* Professional blue for your name */
+    font-size: 2.5rem;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #555555;
+    font-weight: normal;
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+h3 {
+    color: #0056b3;
+    border-bottom: 2px solid #eeeeee; /* A nice dividing line under section titles */
+    padding-bottom: 5px;
+}
+
+/* 4. LISTS (For Education and Links) */
+ul {
+    list-style-type: square; /* Cool square bullet points */
+    padding-left: 20px;
+}
+
+/* 5. REMOVE THE UGLY DEFAULT HR LINES */
+hr {
+    display: none; /* We don't need these anymore because of the white boxes! */
+}
