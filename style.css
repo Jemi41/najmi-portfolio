@@ -100,3 +100,12 @@ body.dark-mode #darkModeToggle {
 body.dark-mode #darkModeToggle:hover {
     background-color: #444444; /* Slightly lighter gray when hovered */
 }
+
+/* PROJECT IMAGES */
+.project-img {
+    display: block; /* Tells the browser to treat the image like a box */
+    margin: 15px auto; /* 'auto' on the left and right pushes it perfectly to the center */
+    max-width: 50%; /* Prevents the image from being too huge */
+    border-radius: 8px; /* Keeps your nice rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow to make it pop */
+}
