@@ -1,32 +1,33 @@
 /* 1. OVERALL PAGE SETUP */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Permanent dark background */
-    color: #ffffff; /* White text for contrast */
+    background-color: #121212; 
+    color: #ffffff; 
     line-height: 1.6;
     margin: 0;
     padding: 0;
+    padding-top: 80px; /* Pushes content down so navbar doesn't cover the header */
 }
 
 /* 2. THE MAIN CONTAINER */
 header, section, footer {
     max-width: 800px;
-    margin: 20px auto;
-    background-color: #1e1e1e; /* Dark gray boxes for sections */
+    margin: 60px auto; /* Increased margin for better centering focus */
+    background-color: #1e1e1e;
     padding: 30px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle lift for dark theme */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); 
 }
 
 /* 3. HEADINGS & ACCENTS */
 h1 {
-    color: #66b2ff; /* Professional blue highlight */
+    color: #66b2ff; 
     font-size: 2.5rem;
     margin-bottom: 5px;
 }
 
 h2 {
-    color: #cccccc; /* Light gray for the student subtitle */
+    color: #cccccc; 
     font-weight: normal;
     font-size: 1.2rem;
     margin-top: 0;
@@ -40,7 +41,7 @@ h3 {
 
 /* 4. PROJECT LINK STYLES */
 article a {
-    text-decoration: none; /* No default underline */
+    text-decoration: none; 
 }
 
 article a h4 {
@@ -49,7 +50,7 @@ article a h4 {
 }
 
 article a h4:hover {
-    color: #ffb347; /* Soft orange highlight on hover */
+    color: #ffb347; 
     text-decoration: underline;
 }
 
@@ -60,7 +61,7 @@ ul {
 }
 
 hr {
-    display: none; /* Layout is managed by section boxes */
+    display: none; 
 }
 
 /* 6. PROJECT IMAGES & CARDS */
@@ -72,22 +73,22 @@ article {
 }
 
 article:hover {
-    transform: translateY(-5px); /* Lift effect for the card */
+    transform: translateY(-5px); 
     border: 1px solid #66b2ff;
-    background-color: #252525; /* Subtle background highlight */
+    background-color: #252525; 
 }
 
 .project-img {
     display: block; 
     margin: 15px auto; 
-    max-width: 80%; /* Adjusted for better visibility on most screens */
+    max-width: 80%; 
     border-radius: 8px; 
     box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-img:hover {
-    transform: scale(1.03); /* Slight zoom on image */
+    transform: scale(1.03); 
     box-shadow: 0 10px 20px rgba(0,0,0,0.5);
 }
 
@@ -96,14 +97,14 @@ article:hover {
     display: flex;
     gap: 15px;
     margin-top: 20px;
-    flex-wrap: wrap; /* Responsive stacking for mobile */
+    flex-wrap: wrap; 
 }
 
 .btn {
     display: inline-block;
     padding: 10px 20px;
     background-color: #66b2ff;
-    color: #121212 !important; /* Dark text on light blue buttons */
+    color: #121212 !important; 
     text-decoration: none !important;
     border-radius: 5px;
     font-weight: bold;
@@ -119,33 +120,33 @@ article:hover {
 /* 8. SCROLL REVEAL ANIMATIONS */
 .reveal {
     opacity: 0;
-    transform: translateY(30px); /* Slide up effect */
+    transform: translateY(30px); 
     transition: all 0.8s ease-out;
 }
 
 .reveal.active {
     opacity: 1;
-    transform: translateY(0); /* Final visible position */
+    transform: translateY(0); 
 }
 
-/* AWARDS & ACHIEVEMENTS STYLING */
+/* 9. AWARDS & ACHIEVEMENTS STYLING */
 .achievement-item {
     margin-bottom: 20px;
     padding: 15px;
-    border-left: 4px solid #66b2ff; /* Blue accent line */
-    background-color: #252525; /* Slightly lighter than the section background */
+    border-left: 4px solid #66b2ff; 
+    background-color: #252525; 
     border-radius: 0 8px 8px 0;
     transition: transform 0.3s ease;
 }
 
 .achievement-item:hover {
-    transform: translateX(10px); /* Subtle slide effect on hover */
+    transform: translateX(10px); 
     background-color: #2a2a2a;
 }
 
 .achievement-item h4 {
     margin-top: 0;
-    color: #ffb347; /* Gold/Orange color for the titles */
+    color: #ffb347; 
     margin-bottom: 5px;
 }
 
@@ -154,163 +155,7 @@ article:hover {
     font-size: 0.95rem;
 }
 
-/* 1. OVERALL PAGE SETUP */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #121212; /* Permanent dark background */
-    color: #ffffff; /* White text for contrast */
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-
-/* 2. THE MAIN CONTAINER */
-header, section, footer {
-    max-width: 800px;
-    margin: 20px auto;
-    background-color: #1e1e1e; /* Dark gray boxes for sections */
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* Subtle lift for dark theme */
-}
-
-/* 3. HEADINGS & ACCENTS */
-h1 {
-    color: #66b2ff; /* Professional blue highlight */
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-}
-
-h2 {
-    color: #cccccc; /* Light gray for the student subtitle */
-    font-weight: normal;
-    font-size: 1.2rem;
-    margin-top: 0;
-}
-
-h3 {
-    color: #66b2ff;
-    border-bottom: 2px solid #333333;
-    padding-bottom: 5px;
-}
-
-/* 4. PROJECT LINK STYLES */
-article a {
-    text-decoration: none; /* No default underline */
-}
-
-article a h4 {
-    color: #66b2ff;
-    transition: color 0.2s ease;
-}
-
-article a h4:hover {
-    color: #ffb347; /* Soft orange highlight on hover */
-    text-decoration: underline;
-}
-
-/* 5. LISTS & HR */
-ul {
-    list-style-type: square;
-    padding-left: 20px;
-}
-
-hr {
-    display: none; /* Layout is managed by section boxes */
-}
-
-/* 6. PROJECT IMAGES & CARDS */
-article {
-    transition: transform 0.3s ease, border 0.3s ease, background-color 0.3s ease;
-    border: 1px solid transparent;
-    padding: 15px;
-    border-radius: 8px;
-}
-
-article:hover {
-    transform: translateY(-5px); /* Lift effect for the card */
-    border: 1px solid #66b2ff;
-    background-color: #252525; /* Subtle background highlight */
-}
-
-.project-img {
-    display: block; 
-    margin: 15px auto; 
-    max-width: 80%; /* Adjusted for better visibility on most screens */
-    border-radius: 8px; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.3); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-img:hover {
-    transform: scale(1.03); /* Slight zoom on image */
-    box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-}
-
-/* 7. CONTACT BUTTONS */
-.contact-links {
-    display: flex;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap; /* Responsive stacking for mobile */
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #66b2ff;
-    color: #121212 !important; /* Dark text on light blue buttons */
-    text-decoration: none !important;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-}
-
-.btn:hover {
-    background-color: #99ccff;
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(102, 178, 255, 0.3);
-}
-
-/* 8. SCROLL REVEAL ANIMATIONS */
-.reveal {
-    opacity: 0;
-    transform: translateY(30px); /* Slide up effect */
-    transition: all 0.8s ease-out;
-}
-
-.reveal.active {
-    opacity: 1;
-    transform: translateY(0); /* Final visible position */
-}
-
-/* AWARDS & ACHIEVEMENTS STYLING */
-.achievement-item {
-    margin-bottom: 20px;
-    padding: 15px;
-    border-left: 4px solid #66b2ff; /* Blue accent line */
-    background-color: #252525; /* Slightly lighter than the section background */
-    border-radius: 0 8px 8px 0;
-    transition: transform 0.3s ease;
-}
-
-.achievement-item:hover {
-    transform: translateX(10px); /* Subtle slide effect on hover */
-    background-color: #2a2a2a;
-}
-
-.achievement-item h4 {
-    margin-top: 0;
-    color: #ffb347; /* Gold/Orange color for the titles */
-    margin-bottom: 5px;
-}
-
-.achievement-item p {
-    margin: 5px 0;
-    font-size: 0.95rem;
-}
-
-/* TECHNICAL TOOLBOX STYLING */
+/* 10. TECHNICAL TOOLBOX STYLING */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -333,23 +178,25 @@ article:hover {
     transform: translateY(-3px);
 }
 
+/* 11. MISSION STATEMENT */
 .mission-statement {
     font-style: italic;
-    color: #ffb347; /* Gold highlight */
+    color: #ffb347; 
     font-size: 1.1rem;
     border-left: 3px solid #66b2ff;
     padding-left: 15px;
     margin: 15px 0;
 }
-/* NAVBAR STYLING */
+
+/* 12. NAVBAR STYLING */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
     height: 70px;
-    background-color: rgba(30, 30, 30, 0.95); /* Matches your section color */
-    backdrop-filter: blur(10px); /* Glass effect */
-    z-index: 1000; /* Stays above everything */
+    background-color: rgba(30, 30, 30, 0.95); 
+    backdrop-filter: blur(10px); 
+    z-index: 1000; 
     border-bottom: 1px solid #333;
 }
 
@@ -374,6 +221,8 @@ article:hover {
     display: flex;
     list-style: none;
     gap: 25px;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -388,15 +237,56 @@ article:hover {
     color: #66b2ff;
 }
 
-/* ADJUST BODY TO PREVENT CONTENT CLASH */
-body {
-    padding-top: 80px; /* Pushes content down so navbar doesn't cover the header */
+/* 13. IMAGE SLIDER STYLING */
+.image-slider {
+    position: relative;
+    max-width: 80%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
 }
-header, section, footer {
-    max-width: 800px;
-    margin: 60px auto; /* Increased margin for better centering focus */
-    background-color: #1e1e1e;
-    padding: 30px;
+
+.slides {
+    width: 100%;
+    overflow: hidden;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05);
+}
+
+.slides .slide {
+    display: none;
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+.slides .slide.active {
+    display: block;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(30, 30, 30, 0.9);
+    color: #66b2ff;
+    border: 1px solid #66b2ff;
+    cursor: pointer;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: #66b2ff;
+    color: #121212;
+}
+
+.slider-btn.prev {
+    left: -20px;
+}
+
+.slider-btn.next {
+    right: -20px;
 }
